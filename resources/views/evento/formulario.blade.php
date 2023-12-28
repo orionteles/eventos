@@ -53,6 +53,50 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Causas</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content" id="div-causas">
+                </div>
+            </div>
+        </div>
     </div>
 
+@endsection
+
+
+@section('js')
+    <script>
+        $(function(){
+
+            $('#div-causas').load('/causa/create')
+
+            // $('.enviar-edicao-equipe').change(function(){
+            //
+            //     var obj = $(this)
+            //     var ordem = $(this).val();
+            //     var tipo = $(this).data('tipo');
+            //     var edicao_id = $('#edicao_id').val();
+            //     var _token = $('[name="_token"]').val();
+            //     var equipe_id = $(this).data('equipe-id');
+            //     var edicao_equipe_id = $(this).data('edicao-equipe-id');
+            //
+            //     $.ajax({
+            //         type: "POST",
+            //         url: '/edicao-equipe',
+            //         data: {edicao_id, equipe_id, edicao_equipe_id, ordem, tipo, _token},
+            //         success: function(response){
+            //             obj.data('edicao-equipe-id', response);
+            //         }
+            //     });
+            // });
+        })
+    </script>
 @endsection

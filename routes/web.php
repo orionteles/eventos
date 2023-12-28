@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::resource('/evento', \App\Http\Controllers\EventoController::class);
+Route::resource('/causa', \App\Http\Controllers\CausaController::class);
+Route::resource('/controle', \App\Http\Controllers\ControleController::class);

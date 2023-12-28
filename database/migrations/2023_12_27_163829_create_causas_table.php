@@ -17,6 +17,7 @@ class CreateCausasTable extends Migration
             $table->id();
             $table->string('nome', 1000);
             $table->string('tipo', 1);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

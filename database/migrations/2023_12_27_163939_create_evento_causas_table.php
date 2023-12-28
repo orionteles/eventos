@@ -19,6 +19,7 @@ class CreateEventoCausasTable extends Migration
             $table->foreign('evento_id')->references('id')->on('eventos');
             $table->unsignedBigInteger('causa_id');
             $table->foreign('causa_id')->references('id')->on('causas');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
